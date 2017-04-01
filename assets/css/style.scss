@@ -2,3 +2,8 @@
 ---
 
 @import "{{ site.theme }}";
+
+.contact ul > li{
+    
+    display:inline-block;
+}
