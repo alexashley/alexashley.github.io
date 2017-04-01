@@ -1,6 +1,6 @@
 ---
 layout: post
-title: All posts
+title: Weblog - All Posts
 permalink: /blog/
 ---
 
