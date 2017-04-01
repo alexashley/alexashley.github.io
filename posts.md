@@ -1,6 +1,7 @@
 ---
 layout: post
 title: All posts
+permalink: posts
 ---
 
 {% for post in site.posts %}	
