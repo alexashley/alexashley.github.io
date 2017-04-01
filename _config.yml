@@ -1,10 +1,9 @@
 theme: jekyll-theme-minimal
-title: Alex Ashley | Developer
 defaults:
   -
     scope:
       path: ""
       type: "posts"
     values:
-      layout: "post"
+      layout: "default"
       permalink: /blog/:title/
