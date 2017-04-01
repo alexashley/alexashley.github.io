@@ -11,44 +11,39 @@
 
     <title>{{ page.title }}</title>
   </head>
-
   <body>
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <h1 id="project_title">{{ page.title }}</h1>
-          <h2 id="project_tagline">{{ page.description }}</h2>
-        </header>
-    </div>
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
-        {{ content }}
-      </section>
-    </div>
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        <ul>
-          <li>
-            <a href="mailto:alexashley15+blog@gmail.com">
-              <span class="fa "></span> Email
-            </a>
-          </li>
-          <li>
-              <a href="https://github.com/alexashley">
+    <div class="wrapper">
+    <header>
+        <h1>{{ page.title }}</h1>
+        <p>{{ page.description }}</p>
+    </header>
+    <section>
+    {{ content }}
+    </section>
+    <footer>
+      <ul>
+        <li>
+          <a href="mailto:alexashley15+blog@gmail.com">
+            <span class="fa fa-envelope"></span> Email
+          </a>
+        </li>
+        <li>
+            <a href="https://github.com/alexashley">
               <span class="fa fa-github"></span> GitHub
-              </a>
-          </li>
-          <li>
-            <a href="https://www.linkedin.com/in/alex-h-ashley/">
+            </a>
+        </li>
+        <li>
+          <a href="https://www.linkedin.com/in/alex-h-ashley/">
             <span class="fa fa-linkedin-square"></span> LinkedIn
-            </a>
-          </li>
-          <li>
-            <a href="http://stackoverflow.com/users/7279065/gleisner">
+          </a>
+        </li>
+        <li>
+          <a href="http://stackoverflow.com/users/7279065/gleisner">
             <span class="fa fa-stack-overflow"></span> StackOverflow
-            </a>
-          </li>
-        </ul>
-      </footer>
-    </div>
+          </a>
+        </li>
+      </ul>
+    </footer>
+  </div>
   </body>
 </html>
