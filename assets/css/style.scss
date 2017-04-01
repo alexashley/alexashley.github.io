@@ -3,8 +3,11 @@
 
 @import "{{ site.theme }}";
 
-ul.contact > li{
-    list-style-type: none;
+ul.contact {
     padding: 0;
-    margin: 0;
+    > li{
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
 }

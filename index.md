@@ -1,5 +1,5 @@
 ---
-title: Alex Ashley | Developer
+title: Alex Ashley
 ---
 
 ## About
