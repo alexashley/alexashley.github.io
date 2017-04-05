@@ -1,8 +1,10 @@
 ---
-title: Verifying PropertyChanged
+title: Verifying Events
 ---
 
-Say we have a class, `MyObservableItem`, that implements `INotifyPropertyChanged`.
+When test-driving or just adding tests to an existing class, we often need to verify that an event was raised.
+We could try to verify any state changes that the raised event causes, but that's not always easy to achieve when writing unit tests. 
+For instance, say we have a class, `MyObservableItem`, that implements `INotifyPropertyChanged`.
 We want to raise `PropertyChanged` whenever the `Name` property changes; however, we're test-driving, so we first need to write a test that forces that change in the production code.
 
 ```cs
