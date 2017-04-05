@@ -5,7 +5,7 @@ title: Verifying PropertyChanged
 Say we have a class, `MyObservableItem`, that implements `INotifyPropertyChanged`.
 We want to raise `PropertyChanged` whenever the `Name` property changes; however, we're test-driving, so we first need to write a test that forces that change in the production code.
 
-```C#
+```cs
 public class MyObservableItem : INotifyPropertyChanged
 {
     private int _name;
@@ -26,8 +26,7 @@ public class MyObservableItem : INotifyPropertyChanged
 
 We could simply attach an event handler and check the result:
 
-```C#
-
+```cs
 [TestClass]
 public class MyObservableItemTest
 {
@@ -52,7 +51,7 @@ If we had more classes that implemented `INotifyPropertyChanged` and we want to 
 Instead, we can create a class that will track the number of times `PropertyChanged` is invoked and for which properties.
 
 We'll first need a class to hold the information about our events. Let's call it `EventRecord`.
-```C#
+```cs
 public class EventRecord
 {
     public int Count { get; set; }
@@ -63,7 +62,7 @@ public class EventRecord
 
 Then we can write a generic class that wraps a `Dictionary` in order to keep track of which properties have raised `PropertyChanged`.
 
-```C#
+```cs
 public class PropertyChangedEventRecorder<T> 
 {
     private Dictionary<string, EventRecord> _properties;
@@ -102,7 +101,7 @@ public class PropertyChangedEventRecorder<T>
 
 If we also implement an [`indexer`](https://msdn.microsoft.com/en-us/library/2549tw02.aspx) for the class, we can write assertions like the following:
 
-```C#
+```cs
 [TestMethod]
 public void ShouldRaisePropertyChangedForName()
 {
