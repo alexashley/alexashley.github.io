@@ -26,7 +26,7 @@ public class MyObservableItem : INotifyPropertyChanged
 }
 ```
 
-We could simply attach an event handler and check the result:
+We could simply attach an event handler and check the result.
 
 ```cs
 [TestClass]
@@ -96,7 +96,11 @@ public class PropertyChangedEventRecorder<T>
 
     public EventRecord this[string propertyName]
     {
-        get { return _properties.ContainsKey(propertyName) ? _properties[propertyName] : new EventRecord(); }
+        get
+        {
+            return _properties.ContainsKey(propertyName)
+                ? _properties[propertyName] : new EventRecord();
+        }
     }
 }
 ```

@@ -15,3 +15,19 @@ ul.contact {
 .post-listing {
     margin-bottom: 0px;
 }
+
+  body {
+    word-wrap:break-word;
+  }
+
+  header {
+    padding:0;
+  }
+
+  header ul, header p.view {
+    position:static;
+  }
+
+  pre, code {
+    word-wrap:normal;
+  }
