@@ -1,5 +1,6 @@
 ---
 title: Verifying Events
+date: 2017-04-04
 ---
 
 When test-driving or just adding tests to an existing class, we often need to verify that an event was raised.
