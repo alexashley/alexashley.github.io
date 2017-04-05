@@ -113,14 +113,14 @@ If we also implement an [`indexer`](https://msdn.microsoft.com/en-us/library/254
 public void ShouldRaisePropertyChangedForName()
 {
     var item = new MyObservableItem();
-    var eventRecord = new EventRecord(item);
+    var eventRecorder = new PropertyChangedEventRecorder<MyObservableItem>(item);
 
     item.Name = "Steve";
     item.Name = "Bob";
     item.Name = "Stacy";
 
-    Assert.IsTrue(eventRecord[nameof(item.Name)].Fired);
-    Assert.AreEqual(3, eventRecord[nameof(item.Name)].Count);
+    Assert.IsTrue(eventRecorder[nameof(item.Name)].Fired);
+    Assert.AreEqual(3, eventRecorder[nameof(item.Name)].Count);
 }
 ```
 So now we have an easy, re-usable way to assert that `PropertyChanged` was raised.
